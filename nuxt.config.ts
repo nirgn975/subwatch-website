@@ -1,40 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro'],
-
-  modules: [
-    '@nuxt/content',
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/image',
-    '@nuxt/ui'
-  ],
-
+  extends: ["@nuxt/ui-pro"],
+  modules: ["@nuxt/content", "@nuxt/fonts", "@nuxt/image", "@nuxt/ui"],
   routeRules: {
     // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
-    '/': { prerender: true }
+    "/": { prerender: true },
   },
-
   devtools: {
-    enabled: true
+    enabled: true,
   },
-
+  colorMode: {
+    preference: "dark",
+  },
   typescript: {
-    strict: false
+    strict: false,
   },
-
   future: {
-    compatibilityVersion: 4
+    compatibilityVersion: 4,
   },
-
-  eslint: {
-    config: {
-      stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs'
-      }
-    }
-  },
-
-  compatibilityDate: '2024-07-11'
-})
+  compatibilityDate: "2024-07-11",
+});
