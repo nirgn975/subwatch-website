@@ -14,8 +14,11 @@ useSeoMeta({
   <div>
     <ULandingHero :title="page.hero.title" :description="page.hero.description" :links="page.hero.links" id="features" :ui="{ wrapper: 'py-24 relative' }">
       <template #default>
-        <div class="h-[32rem] w-[36rem] mx-auto ring-1 ring-neutral-700 rounded-2xl px-4">
+        <div class="hidden sm:block h-[32rem] w-[36rem] mx-auto ring-1 ring-neutral-700 rounded-2xl px-4">
           <AppExtension />
+        </div>
+        <div class="block sm:hidden">
+          <img src="/extension.png" class="" />
         </div>
 
         <ULandingGrid>

@@ -6,23 +6,19 @@ const links = computed(() => [
   {
     label: "Features",
     to: "#features",
-    icon: "i-heroicons-cube-transparent",
-    active:
-      activeHeadings.value.includes("features") &&
-      !activeHeadings.value.includes("pricing"),
+    icon: "i-heroicons-sparkles",
+    active: activeHeadings.value.includes("features") && !activeHeadings.value.includes("pricing"),
   },
   {
     label: "Pricing",
     to: "#pricing",
     icon: "i-heroicons-credit-card",
-    active:
-      activeHeadings.value.includes("pricing") &&
-      !activeHeadings.value.includes("testimonials"),
+    active: activeHeadings.value.includes("pricing") && !activeHeadings.value.includes("testimonials"),
   },
   {
     label: "Testimonials",
     to: "#testimonials",
-    icon: "i-heroicons-academic-cap",
+    icon: "i-heroicons-chat-bubble-left-right",
     active: activeHeadings.value.includes("testimonials"),
   },
   {
@@ -53,13 +49,7 @@ nuxtApp.hooks.hookOnce("page:finish", () => {
     </template>
 
     <template #right>
-      <UButton
-        label="Buy now"
-        color="white"
-        variant="ghost"
-        trailing-icon="i-heroicons-arrow-right-20-solid"
-        class="hidden lg:flex"
-      />
+      <UButton label="Buy now" color="white" variant="ghost" trailing-icon="i-heroicons-arrow-right-20-solid" class="hidden lg:flex" />
     </template>
 
     <template #panel>
