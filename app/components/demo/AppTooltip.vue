@@ -52,7 +52,7 @@ const getOrdinalNum = (n: number) => {
       <div class="col-span-5">
         <span class="flex gap-2">
           <img :src="`https://img.logo.dev/${subscription.domain}?token=pk_JrIah0kcTFeKu4Xk9or1xw`" class="h-6 w-6 rounded-full" />
-          <p class="text-lg">{{ subscription.name }}</p>
+          <p class="text-lg capitalize">{{ subscription.name }}</p>
         </span>
         <p class="text-neutral-500 text-[0.65rem]">
           Every month on the

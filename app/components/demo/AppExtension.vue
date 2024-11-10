@@ -136,7 +136,7 @@ const changeTime = (value: number) => {
     <EnTotal v-if="currnetPage == 'total'" :monthData="monthData" :total="total" @back="currnetPage = 'calendar'" />
 
     <div class="text-center">
-      <a href="https://logo.dev" alt="Logo API" class="text-[0.65rem] text-neutral-500">Logos provided by Logo.dev</a>
+      <a href="https://logo.dev" alt="Logo API" class="text-xs text-neutral-500">Logos provided by Logo.dev</a>
     </div>
   </div>
 </template>

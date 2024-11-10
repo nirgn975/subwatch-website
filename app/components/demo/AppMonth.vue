@@ -23,8 +23,8 @@ defineProps({
 </script>
 
 <template>
-  <div class="grid grid-cols-7 gap-1 h-96 overflow-hidden" ref="parent">
-    <div v-for="day of week" :key="day.number" class="bg-neutral-700 rounded-xl flex justify-center items-center z-10">
+  <div class="grid grid-cols-7 gap-1 overflow-hidden" ref="parent">
+    <div v-for="day of week" :key="day.number" class="bg-neutral-700 rounded-xl flex justify-center items-center z-10 h-8">
       <p :class="[currentDay == day.number && currentMonth == new Date().getMonth() ? 'text-neutral-200' : 'text-neutral-400', 'uppercase text-center']">
         {{ day.label }}
       </p>

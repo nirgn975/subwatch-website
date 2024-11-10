@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const nuxtApp = useNuxtApp();
 const { activeHeadings, updateHeadings } = useScrollspy();
+const { data: page } = await useAsyncData("index", () => queryContent("/").findOne());
 
 const links = computed(() => [
   {
@@ -49,7 +50,7 @@ nuxtApp.hooks.hookOnce("page:finish", () => {
     </template>
 
     <template #right>
-      <UButton label="Buy now" color="white" variant="ghost" trailing-icon="i-heroicons-arrow-right-20-solid" class="hidden lg:flex" />
+      <UButton label="Manage account" :to="page.lemonsqueezyPortal" target="_blank" color="white" variant="ghost" class="hidden lg:flex" />
     </template>
 
     <template #panel>
@@ -57,7 +58,7 @@ nuxtApp.hooks.hookOnce("page:finish", () => {
 
       <UDivider class="my-6" />
 
-      <UButton label="Buy now" color="white" block class="mb-3" />
+      <UButton label="Manage account" color="white" block :to="page.lemonsqueezyPortal" target="_blank" class="mb-3" />
     </template>
   </UHeader>
 </template>

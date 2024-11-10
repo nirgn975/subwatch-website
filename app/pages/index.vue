@@ -14,7 +14,7 @@ useSeoMeta({
   <div>
     <ULandingHero :title="page.hero.title" :description="page.hero.description" :links="page.hero.links" id="features" :ui="{ wrapper: 'py-24 relative' }">
       <template #default>
-        <div class="hidden sm:block h-[32rem] w-[36rem] mx-auto ring-1 ring-neutral-700 rounded-2xl px-4">
+        <div class="hidden sm:block w-[36rem] mx-auto ring-1 ring-neutral-700 rounded-2xl px-4">
           <AppExtension />
         </div>
         <div class="block sm:hidden">
@@ -46,8 +46,9 @@ useSeoMeta({
       <UPricingCard
         :title="page.pricing.plan"
         :price="page.pricing.price"
+        :discount="page.pricing.discount"
         :highlight="false"
-        :button="{ label: 'Buy now' }"
+        :button="{ label: 'Buy now', to: page.lemonsqueezyCheckout, target: '_blank' }"
         orientation="horizontal"
         align="bottom"
         :features="page.pricing.features"
@@ -63,7 +64,9 @@ useSeoMeta({
     </ULandingSection>
 
     <ULandingSection class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10" :ui="{ wrapper: 'py-24' }">
-      <ULandingCTA v-bind="page.cta" :card="false" />
+      <ULandingCTA v-bind="page.cta" :card="false" align="left">
+        <img src="https://picsum.photos/640/360" class="w-full rounded-md shadow-xl ring-1 ring-gray-300 dark:ring-gray-700" />
+      </ULandingCTA>
     </ULandingSection>
 
     <ULandingSection id="faq" :title="page.faq.title" :description="page.faq.description" class="scroll-mt-[var(--header-height)]" :ui="{ wrapper: 'py-24' }">
