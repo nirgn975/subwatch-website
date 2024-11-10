@@ -41,7 +41,7 @@ nuxtApp.hooks.hookOnce("page:finish", () => {
 </script>
 
 <template>
-  <UHeader :links="links">
+  <UHeader :links="links" class="dark:bg-gray-950">
     <template #logo>
       <span class="flex items-center gap-1">
         <UIcon name="i-heroicons-arrow-path-rounded-square" class="h-6 w-6" />
