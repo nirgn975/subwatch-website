@@ -1,32 +1,60 @@
 <script setup lang="ts">
 import EnTooltip from "./AppTooltip.vue";
 
-const week = [
-  { number: 0, label: "sun" },
-  { number: 1, label: "mon" },
-  { number: 2, label: "tue" },
-  { number: 3, label: "wed" },
-  { number: 4, label: "thu" },
-  { number: 5, label: "fri" },
-  { number: 6, label: "sat" },
-];
-
 const itemRefs = useTemplateRef("items");
 const parentRef = useTemplateRef("parent");
 const currentDay = ref(new Date().getDay());
 const currentDate = ref(new Date().getDate());
-defineProps({
+const startOnOffset = ref(1);
+const week = ref([
+  { number: 0, label: "sunday" },
+  { number: 1, label: "monday" },
+  { number: 2, label: "tuesday" },
+  { number: 3, label: "wednesday" },
+  { number: 4, label: "thursday" },
+  { number: 5, label: "friday" },
+  { number: 6, label: "saturday" },
+]);
+const props = defineProps({
   currentMonth: { type: Number, required: true },
   currentYear: { type: Number, required: true },
   monthData: { type: Array<any>, required: true },
+  firstDay: { type: Number, required: true },
+  weekDays: { type: Object, required: true },
 });
+
+onMounted(() => computeWeekOrder());
+watch(props, () => computeWeekOrder());
+
+const computeWeekOrder = async () => {
+  if (!props.weekDays || !props.firstDay) {
+    return;
+  }
+
+  const dayNumber = Object.entries(props.weekDays).filter((item) => (Number(item[0]) == props.firstDay ? item[1] : false))?.[0];
+  const weekOffsets: Record<string, number> = { sunday: 1, monday: 0, saturday: 2 };
+  startOnOffset.value = weekOffsets[String(dayNumber?.[1])];
+  const newWeek = [];
+  for (let i = 0; i < 7; i++) {
+    newWeek.push({ number: i + 1, label: props.weekDays[(i + Number(dayNumber[0])) % 7 == 0 ? 7 : (i + Number(dayNumber[0])) % 7] });
+  }
+
+  week.value = newWeek;
+};
 </script>
 
 <template>
   <div class="grid grid-cols-7 gap-1 overflow-hidden" ref="parent">
     <div v-for="day of week" :key="day.number" class="bg-neutral-700 rounded-xl flex justify-center items-center z-10 h-8">
-      <p :class="[currentDay == day.number && currentMonth == new Date().getMonth() ? 'text-neutral-200' : 'text-neutral-400', 'uppercase text-center']">
-        {{ day.label }}
+      <p
+        :class="[
+          (currentDay + startOnOffset == 0 ? 7 : currentDay + startOnOffset) == day.number && currentMonth == new Date().getMonth()
+            ? 'text-neutral-200'
+            : 'text-neutral-400',
+          'uppercase text-center',
+        ]"
+      >
+        {{ day.label.slice(0, 3) }}
       </p>
     </div>
 

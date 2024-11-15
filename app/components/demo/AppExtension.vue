@@ -9,6 +9,8 @@ const currnetPage: Ref<"calendar" | "total" | "settings"> = ref("calendar");
 const currentMonth = ref(new Date().getMonth());
 const currentYear = ref(new Date().getFullYear());
 const current = computed(() => new Date(currentYear.value, currentMonth.value + 1, 0));
+const firstDay = ref((new Intl.Locale("en-US") as any).weekInfo.firstDay);
+const weekDays = { 1: "monday", 2: "tuesday", 3: "wednesday", 4: "thursday", 5: "friday", 6: "saturday", 7: "sunday" };
 const subscriptionsData: Ref<Array<any>> = ref([
   { billing: [{ end_date: null, price: "2", start_date: "2024-11-05" }], domain: "netflix.com", name: "netflix" },
   { billing: [{ end_date: null, price: "5", start_date: "2024-10-03" }], domain: "google.com", name: "google" },
@@ -17,6 +19,10 @@ const subscriptionsData: Ref<Array<any>> = ref([
   { billing: [{ end_date: null, price: "8", start_date: "2024-09-27" }], domain: "apple.com", name: "apple" },
   { billing: [{ end_date: null, price: "8", start_date: "2024-09-27" }], domain: "figma.com", name: "figma" },
 ]);
+
+onMounted(() => {
+  firstDay.value = (new Intl.Locale(navigator?.language || "en-US") as any).weekInfo.firstDay;
+});
 
 const monthData = computed(() => {
   const data: Array<Record<string, any>> = [];
@@ -77,7 +83,7 @@ const changeTime = (value: number) => {
 
 <template>
   <div class="w-full p-2">
-    <div class="text-neutral-50 flex justify-between items-center mb-2">
+    <div class="text-neutral-50 flex justify-between items-center my-2">
       <div v-if="currnetPage == 'settings' || currnetPage == 'total'" @click="currnetPage = 'calendar'" class="text-neutral-50 cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -130,6 +136,8 @@ const changeTime = (value: number) => {
       :currentMonth="currentMonth"
       :currentYear="currentYear"
       :monthData="monthData"
+      :firstDay="firstDay"
+      :weekDays="weekDays"
       @total="(value) => (total = value)"
     />
 

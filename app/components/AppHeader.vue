@@ -49,10 +49,6 @@ nuxtApp.hooks.hookOnce("page:finish", () => {
       </span>
     </template>
 
-    <template #right>
-      <UButton label="Manage account" :to="page.lemonsqueezyPortal" target="_blank" color="white" variant="ghost" class="hidden lg:flex" />
-    </template>
-
     <template #panel>
       <UAsideLinks :links="links" />
 

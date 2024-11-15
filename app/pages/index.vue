@@ -18,7 +18,7 @@ useSeoMeta({
           <AppExtension />
         </div>
         <div class="block sm:hidden">
-          <img src="/extension.png" class="" />
+          <img src="/extension.png" />
         </div>
 
         <ULandingGrid>
@@ -65,7 +65,7 @@ useSeoMeta({
 
     <ULandingSection class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10" :ui="{ wrapper: 'py-24' }">
       <ULandingCTA v-bind="page.cta" :card="false" align="left">
-        <img src="https://picsum.photos/640/360" class="w-full rounded-md shadow-xl ring-1 ring-gray-300 dark:ring-gray-700" />
+        <img src="/distribution.png" class="w-3/4 rounded-xl shadow-xl ring-1 ring-gray-300 dark:ring-gray-800" />
       </ULandingCTA>
     </ULandingSection>
 

@@ -5,6 +5,7 @@
     </template>
 
     <template #right>
+      <UButton label="Privacy policy" to="/privacy" variant="link" />
       <UButton to="https://x.com/nirgn975" target="_blank" icon="i-simple-icons-x" aria-label="X" color="gray" variant="ghost" />
       <UButton to="https://github.com/nirgn975" target="_blank" icon="i-simple-icons-github" aria-label="GitHub" color="gray" variant="ghost" />
     </template>
