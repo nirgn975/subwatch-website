@@ -65,7 +65,11 @@ useSeoMeta({
 
     <ULandingSection class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10" :ui="{ wrapper: 'py-24' }">
       <ULandingCTA v-bind="page.cta" :card="false" align="left">
-        <img src="/distribution.png" class="w-3/4 rounded-xl shadow-xl ring-1 ring-gray-300 dark:ring-gray-800" />
+        <div class="relative h-full w-full">
+          <img src="/social-2.png" class="absolute -top-20 -right-36 h-[24rem] w-[24rem]" />
+          <img src="/social-1.png" class="absolute -top-2 -left-6 h-[24rem] w-[24rem]" />
+          <img src="/chrome-notification.png" class="absolute -top-14 left-32 h-[5rem] w-[18rem]" />
+        </div>
       </ULandingCTA>
     </ULandingSection>
 

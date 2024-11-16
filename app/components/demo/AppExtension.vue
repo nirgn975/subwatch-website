@@ -11,13 +11,14 @@ const currentYear = ref(new Date().getFullYear());
 const current = computed(() => new Date(currentYear.value, currentMonth.value + 1, 0));
 const firstDay = ref((new Intl.Locale("en-US") as any).weekInfo.firstDay);
 const weekDays = { 1: "monday", 2: "tuesday", 3: "wednesday", 4: "thursday", 5: "friday", 6: "saturday", 7: "sunday" };
+const previousYear = new Date(new Date().setFullYear(new Date().getFullYear() - 1)).toISOString().split("T")[0];
 const subscriptionsData: Ref<Array<any>> = ref([
-  { billing: [{ end_date: null, price: "2", start_date: "2024-11-05" }], domain: "netflix.com", name: "netflix" },
-  { billing: [{ end_date: null, price: "5", start_date: "2024-10-03" }], domain: "google.com", name: "google" },
-  { billing: [{ end_date: null, price: "20", start_date: "2024-10-14" }], domain: "openai.com", name: "openai" },
-  { billing: [{ end_date: null, price: "8", start_date: "2024-09-23" }], domain: "spotify.com", name: "spotify" },
-  { billing: [{ end_date: null, price: "8", start_date: "2024-09-27" }], domain: "apple.com", name: "apple" },
-  { billing: [{ end_date: null, price: "8", start_date: "2024-09-27" }], domain: "figma.com", name: "figma" },
+  { billing: [{ end_date: null, price: "2", start_date: "2024-11-05", interval: "monthly" }], domain: "netflix.com", name: "netflix" },
+  { billing: [{ end_date: null, price: "5", start_date: "2024-10-03", interval: "monthly" }], domain: "google.com", name: "google" },
+  { billing: [{ end_date: null, price: "20", start_date: "2024-10-14", interval: "monthly" }], domain: "openai.com", name: "openai" },
+  { billing: [{ end_date: null, price: "8", start_date: "2024-09-27", interval: "monthly" }], domain: "spotify.com", name: "spotify" },
+  { billing: [{ end_date: null, price: "8", start_date: previousYear, interval: "yearly" }], domain: "apple.com", name: "apple" },
+  { billing: [{ end_date: null, price: "8", start_date: "2024-09-27", interval: "monthly" }], domain: "figma.com", name: "figma" },
 ]);
 
 onMounted(() => {
