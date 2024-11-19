@@ -17,7 +17,7 @@ useSeoMeta({
   twitterCard: "summary_large_image",
   ogImageType: "image/jpeg",
   ogUrl: "https://subwatch.co",
-  twitterCreator: "nirgn975",
+  twitterCreator: "@nirgn975",
 });
 </script>
 
