@@ -8,8 +8,8 @@ useHead({
 });
 
 useSeoMeta({
-  ogImage: "/social-card.png",
-  twitterImage: "/social-card.png",
+  ogImage: "/social-card.jpg",
+  twitterImage: "/social-card.jpg",
   twitterCard: "summary_large_image",
 });
 </script>
