@@ -53,8 +53,6 @@ nuxtApp.hooks.hookOnce("page:finish", () => {
       <UAsideLinks :links="links" />
 
       <UDivider class="my-6" />
-
-      <UButton label="Manage account" color="white" block :to="page.lemonsqueezyPortal" target="_blank" class="mb-3" />
     </template>
   </UHeader>
 </template>

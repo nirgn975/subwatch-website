@@ -31,7 +31,7 @@ const computeWeekOrder = async () => {
     return;
   }
 
-  const dayNumber = Object.entries(props.weekDays).filter((item) => (Number(item[0]) == props.firstDay ? item[1] : false))?.[0];
+  const dayNumber = Object.entries(props.weekDays).filter((item) => (Number(item[0]) == props.firstDay ? item[1] : false))?.[0] || ["1", "monday"];
   const weekOffsets: Record<string, number> = { sunday: 1, monday: 0, saturday: 2 };
   startOnOffset.value = weekOffsets[String(dayNumber?.[1])];
   const newWeek = [];

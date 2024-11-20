@@ -9,7 +9,7 @@ const currnetPage: Ref<"calendar" | "total" | "settings"> = ref("calendar");
 const currentMonth = ref(new Date().getMonth());
 const currentYear = ref(new Date().getFullYear());
 const current = computed(() => new Date(currentYear.value, currentMonth.value + 1, 0));
-const firstDay = ref((new Intl.Locale("en-US") as any).weekInfo.firstDay);
+const firstDay = ref((new Intl.Locale("en-US") as any)?.weekInfo?.firstDay || "monday");
 const weekDays = { 1: "monday", 2: "tuesday", 3: "wednesday", 4: "thursday", 5: "friday", 6: "saturday", 7: "sunday" };
 const previousYear = new Date(new Date().setFullYear(new Date().getFullYear() - 1)).toISOString().split("T")[0];
 const subscriptionsData: Ref<Array<any>> = ref([
@@ -22,7 +22,7 @@ const subscriptionsData: Ref<Array<any>> = ref([
 ]);
 
 onMounted(() => {
-  firstDay.value = (new Intl.Locale(navigator?.language || "en-US") as any).weekInfo.firstDay;
+  firstDay.value = (new Intl.Locale(navigator?.language || "en-US") as any)?.weekInfo?.firstDay || "monday";
 });
 
 const monthData = computed(() => {

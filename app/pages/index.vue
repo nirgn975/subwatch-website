@@ -48,7 +48,7 @@ useSeoMeta({
         :price="page.pricing.price"
         :discount="page.pricing.discount"
         :highlight="false"
-        :button="{ label: 'Buy now', to: page.lemonsqueezyCheckout, target: '_blank' }"
+        :button="{ label: 'Buy now', to: page.checkout, target: '_blank' }"
         orientation="horizontal"
         align="bottom"
         :features="page.pricing.features"
