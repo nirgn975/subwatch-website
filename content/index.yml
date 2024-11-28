@@ -1,6 +1,6 @@
 title: Subwatch
 description: Turn subscription chaos into financial harmony.
-checkout: https://buy.polar.sh/polar_cl_RQ3x1yWuW3qBvGUVDykgXzjft7eXDtysY0--Kj1YSdA
+checkout: https://subwatch.lemonsqueezy.com/buy/e4f7bf4b-5f85-42a3-939b-6a186edec5ba
 hero:
   title: Turn subscription chaos into financial harmony
   description: Track, alert, and optimize your subscriptions effortlessly.
@@ -8,12 +8,12 @@ hero:
     - label: Buy now
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
-      to: https://buy.polar.sh/polar_cl_RQ3x1yWuW3qBvGUVDykgXzjft7eXDtysY0--Kj1YSdA
+      to: https://subwatch.lemonsqueezy.com/buy/e4f7bf4b-5f85-42a3-939b-6a186edec5ba
       size: xl
     - label: Get on Chrome Webstore
       size: xl
       color: gray
-      to: https://chromewebstore.google.com/detail/superx-twitter-analytics/bjobgelaoehgbnklgcaaehdpckmhkplk
+      to: https://chromewebstore.google.com/detail/subwatch/fnbokglphlnngocknlhgbjcpgjjboeie
       target: _blank
 features:
   - title: Understand easily
@@ -96,12 +96,12 @@ cta:
     - label: Buy now
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
-      to: https://buy.polar.sh/polar_cl_RQ3x1yWuW3qBvGUVDykgXzjft7eXDtysY0--Kj1YSdA
+      to: https://subwatch.lemonsqueezy.com/buy/e4f7bf4b-5f85-42a3-939b-6a186edec5ba
       size: xl
     - label: Get on Chrome Webstore
       size: xl
       color: gray
-      to: https://chromewebstore.google.com/detail/superx-twitter-analytics/bjobgelaoehgbnklgcaaehdpckmhkplk
+      to: https://chromewebstore.google.com/detail/subwatch/fnbokglphlnngocknlhgbjcpgjjboeie
       target: _blank
 faq:
   title: Frequently asked questions

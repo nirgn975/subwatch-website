@@ -55,20 +55,18 @@ useSeoMeta({
       />
     </ULandingSection>
 
-    <ULandingSection :title="page.testimonials.title" :ui="{ wrapper: 'py-24' }">
+    <!-- <ULandingSection :title="page.testimonials.title" :ui="{ wrapper: 'py-24' }">
       <UPageColumns id="testimonials" class="xl:columns-4 scroll-mt-[calc(var(--header-height)+140px+128px+96px)]">
         <div v-for="(testimonial, index) in page.testimonials.items" :key="index" class="break-inside-avoid">
           <ULandingTestimonial v-bind="testimonial" />
         </div>
       </UPageColumns>
-    </ULandingSection>
+    </ULandingSection> -->
 
     <ULandingSection class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10" :ui="{ wrapper: 'py-24' }">
       <ULandingCTA v-bind="page.cta" :card="false" align="left">
-        <div class="relative h-full w-full">
-          <img src="/social-2.png" class="absolute -top-20 -right-36 h-[24rem] w-[24rem]" />
-          <img src="/social-1.png" class="absolute -top-2 -left-6 h-[24rem] w-[24rem]" />
-          <img src="/chrome-notification.png" class="absolute -top-14 left-32 h-[5rem] w-[18rem]" />
+        <div class="relative h-full w-full flex justify-center items-center">
+          <img src="/cta.jpg" class="rounded-xl" />
         </div>
       </ULandingCTA>
     </ULandingSection>
