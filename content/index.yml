@@ -44,6 +44,15 @@ pricing:
     - Secure, private, and local
     - Local backup and restore
     - Lifetime access
+howitworks:
+  title: How it works
+  steps:
+    - step: Step 1
+      description: When you view an email inside of Gmail click the 'Subwatch' button.
+    - step: Step 2
+      description: The menu will open up with all the fields pre-populated (you can edit them).
+    - step: Step 3
+      description: Click 'add subscription' to add it to the subwatch extension.
 testimonials:
   title: Customers are just loving it
   items:

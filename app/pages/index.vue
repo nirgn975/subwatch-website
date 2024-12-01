@@ -55,13 +55,26 @@ useSeoMeta({
       />
     </ULandingSection>
 
-    <!-- <ULandingSection :title="page.testimonials.title" :ui="{ wrapper: 'py-24' }">
+    <!-- <ULandingSection id="testimonials" :title="page.testimonials.title" :ui="{ wrapper: 'py-24' }">
       <UPageColumns id="testimonials" class="xl:columns-4 scroll-mt-[calc(var(--header-height)+140px+128px+96px)]">
         <div v-for="(testimonial, index) in page.testimonials.items" :key="index" class="break-inside-avoid">
           <ULandingTestimonial v-bind="testimonial" />
         </div>
       </UPageColumns>
     </ULandingSection> -->
+
+    <ULandingSection id="howitworks" :title="page.howitworks.title" :ui="{ wrapper: 'py-24' }">
+      <div class="p-4 ring-1 ring-neutral-700 rounded-2xl">
+        <img src="/how-it-works.jpg" class="mb-4 rounded-t-xl" />
+
+        <ol class="flex gap-4">
+          <li v-for="(item, index) of page.howitworks.steps" :key="index" class="w-1/3 flex flex-col gap-4">
+            <span class="px-3 py-1.5 bg-neutral-800 rounded-xl w-fit">{{ item.step }}</span>
+            <p>{{ item.description }}</p>
+          </li>
+        </ol>
+      </div>
+    </ULandingSection>
 
     <ULandingSection class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10" :ui="{ wrapper: 'py-24' }">
       <ULandingCTA v-bind="page.cta" :card="false" align="left">

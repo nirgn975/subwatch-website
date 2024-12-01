@@ -14,14 +14,20 @@ const links = computed(() => [
     label: "Pricing",
     to: "#pricing",
     icon: "i-heroicons-credit-card",
-    active: activeHeadings.value.includes("pricing") && !activeHeadings.value.includes("testimonials"),
+    active: activeHeadings.value.includes("pricing") && !activeHeadings.value.includes("howitworks"),
   },
   {
-    label: "Testimonials",
-    to: "#testimonials",
-    icon: "i-heroicons-chat-bubble-left-right",
-    active: activeHeadings.value.includes("testimonials"),
+    label: "How it work",
+    to: "#howitworks",
+    icon: "i-heroicons-bolt",
+    active: activeHeadings.value.includes("howitworks") && !activeHeadings.value.includes("faq"),
   },
+  // {
+  //   label: "Testimonials",
+  //   to: "#testimonials",
+  //   icon: "i-heroicons-chat-bubble-left-right",
+  //   active: activeHeadings.value.includes("testimonials") && !activeHeadings.value.includes("faq"),
+  // },
   {
     label: "FAQ",
     to: "#faq",
@@ -34,7 +40,8 @@ nuxtApp.hooks.hookOnce("page:finish", () => {
   updateHeadings([
     document.querySelector("#features"),
     document.querySelector("#pricing"),
-    document.querySelector("#testimonials"),
+    document.querySelector("#howitworks"),
+    // document.querySelector("#testimonials"),
     document.querySelector("#faq"),
   ]);
 });
