@@ -8,17 +8,23 @@ useHead({
 });
 
 useSeoMeta({
+  ogSiteName: "Subwatch",
   title: "Subwatch",
   ogTitle: "Subwatch",
+  twitterTitle: "Subwatch",
   description: "Turn subscription chaos into financial harmony.",
   ogDescription: "Turn subscription chaos into financial harmony.",
-  ogImage: "/social-card.jpg",
-  twitterImage: "/social-card.jpg",
+  twitterDescription: "Turn subscription chaos into financial harmony.",
+  ogImage: "/social-card.jpeg",
+  twitterImage: "/social-card.jpeg",
   twitterCard: "summary_large_image",
   ogImageType: "image/jpeg",
   ogUrl: "https://subwatch.co",
   twitterCreator: "@nirgn975",
+  twitterSite: "@nirgn975",
 });
+
+defineOgImageComponent("NuxtSeo");
 </script>
 
 <template>
