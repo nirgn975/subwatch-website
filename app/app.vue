@@ -15,16 +15,14 @@ useSeoMeta({
   description: "Turn subscription chaos into financial harmony.",
   ogDescription: "Turn subscription chaos into financial harmony.",
   twitterDescription: "Turn subscription chaos into financial harmony.",
-  ogImage: "/social-card.jpeg",
-  twitterImage: "/social-card.jpeg",
+  ogImage: "/social-card.png",
+  twitterImage: "/social-card.png",
   twitterCard: "summary_large_image",
-  ogImageType: "image/jpeg",
+  ogImageType: "image/png",
   ogUrl: "https://subwatch.co",
   twitterCreator: "@nirgn975",
   twitterSite: "@nirgn975",
 });
-
-defineOgImageComponent("NuxtSeo");
 </script>
 
 <template>
