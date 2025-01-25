@@ -5,6 +5,7 @@ useHead({
   htmlAttrs: {
     lang: "en",
   },
+  script: [{ src: "https://lmsqueezy.com/affiliate.js", defer: true }],
 });
 
 useSeoMeta({
@@ -22,6 +23,10 @@ useSeoMeta({
   ogUrl: "https://subwatch.co",
   twitterCreator: "@nirgn975",
   twitterSite: "@nirgn975",
+});
+
+onMounted(() => {
+  (window as any).lemonSqueezyAffiliateConfig = { store: "subwatch" };
 });
 </script>
 
