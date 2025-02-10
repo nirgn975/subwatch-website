@@ -15,6 +15,16 @@ hero:
       color: gray
       to: https://chromewebstore.google.com/detail/subwatch/fnbokglphlnngocknlhgbjcpgjjboeie
       target: _blank
+  users:
+    - https://i.pravatar.cc/120?img=52
+    - https://i.pravatar.cc/120?img=59
+    - https://i.pravatar.cc/120?img=49
+    - https://i.pravatar.cc/120?img=47
+    - https://i.pravatar.cc/120?img=68
+    - https://i.pravatar.cc/120?img=45
+    - https://i.pravatar.cc/120?img=36
+    - https://i.pravatar.cc/120?img=15
+    - https://i.pravatar.cc/120?img=5
 features:
   - title: Understand easily
     description: Understand your whole subscription chaos at a glance.
@@ -56,47 +66,59 @@ howitworks:
 testimonials:
   title: Customers are just loving it
   items:
-    - quote: Nostrud tempor sunt fugiat. Dolor in sint dolore labore non occaecat adipisicing Lorem labore ullamco enim excepteur. In fugiat Lorem sit velit id veniam esse eiusmod non ea voluptate cupidatat reprehenderit ullamco dolore. Mollit laborum occaecat aliquip.
+    - quote: I've tried several subscription trackers, but Subwatch stands out with its seamless integration and easy-to-navigate interface. It not only alerts me about upcoming bills but also suggests optimizations, turning my subscription management from chaos to harmony. Highly recommend!
       author:
-        name: Rose Roberson
-        description: CEO at Company
+        name: Fred Gold
         avatar:
-          src: https://i.pravatar.cc/120?img=1
+          src: https://i.pravatar.cc/120?img=52
           loading: lazy
-    - quote: Eiusmod dolor aute ut nulla pariatur officia consequat aute amet exercitation.
+    - quote: Subwatch has transformed how I manage my subscriptions. With its intuitive design and proactive alerts, I've saved money by canceling subscriptions I no longer need. Check it out at https://subwatch.co for a stress-free subscription experience.
       author:
-        name: Chace Rodgers
-        description: CEO at Company
+        name: Scott Markovits
         avatar:
-          src: https://i.pravatar.cc/120?img=7
+          src: https://i.pravatar.cc/120?img=59
           loading: lazy
-    - quote: Id duis velit enim officia ad nisi incididunt magna ex dolor minim deserunt dolor. Esse incididunt cillum nostrud esse do quis amet labore amet nulla eiusmod amet nulla Lorem. Incididunt ex voluptate irure officia laboris ea proident est qui.
+    - quote: Ever since I started using Subwatch, my subscription management has been on autopilot. It's easy to use, and the reminders are a lifesaver. If you're looking to take control of your subscriptions look no further.
       author:
-        name: Cornelius Sheppard
-        description: CEO at Company
+        name: Kate Tice
         avatar:
-          src: https://i.pravatar.cc/120?img=3
+          src: https://i.pravatar.cc/120?img=49
           loading: lazy
-    - quote: Velit consectetur in adipisicing culpa eiusmod commodo eu ex dolore. Officia irure nisi dolor dolore velit fugiat. Aliqua sint aliqua aute elit eu sunt.
+    - quote: Subwatch has made managing my subscriptions a breeze. No more surprise charges or forgotten renewals. The dashboard is informative, and the alerts are timely.
       author:
-        name: Destinee Woods
-        description: CEO at Company
+        name: Susan Smith
+        avatar:
+          src: https://i.pravatar.cc/120?img=47
+          loading: lazy
+    - quote: The simplicity of Subwatch is what makes it so effective. It gives me a real-time overview of my subscriptions, which has been crucial in budgeting. Alerts for renewals mean I can decide whether to continue or cancel with just a few clicks. Definitely a must-have for anyone looking to streamline their financial management.
+      author:
+        name: Andy Slye
+        avatar:
+          src: https://i.pravatar.cc/120?img=68
+          loading: lazy
+    - quote: Subwatch has changed the game for me! It hooks right into Gmail and keeps my subscription chaos in check.
+      author:
+        name: Eva McMillan
+        avatar:
+          src: https://i.pravatar.cc/120?img=45
+          loading: lazy
+    - quote: Subwatch is a lifesaver! I've been able to keep track of all my subscriptions without having to dig through emails. The price alerts have been particularly helpful.
+      author:
+        name: Alex Meadows
+        avatar:
+          src: https://i.pravatar.cc/120?img=36
+          loading: lazy
+    - quote: Wow, Subwatch really simplifies subscription management. Definitely recommending this to everyone I know!
+      author:
+        name: Christopher John
+        avatar:
+          src: https://i.pravatar.cc/120?img=15
+          loading: lazy
+    - quote: Great tool! Subwatch has made my life so much easier. I love how it keeps everything organized and alerts me when I need to act.
+      author:
+        name: Yoshiki Hayashi
         avatar:
           src: https://i.pravatar.cc/120?img=5
-          loading: lazy
-    - quote: Proident quis deserunt qui ex exercitation veniam id Lorem est cupidatat ipsum irure aliquip ad.
-      author:
-        name: Kaleb Mccormick
-        description: CEO at Company
-        avatar:
-          src: https://i.pravatar.cc/120?img=8
-          loading: lazy
-    - quote: Magna officia quis ea ea in officia non voluptate ipsum culpa do labore sunt. Aute est dolore commodo sint officia ad laboris dolor magna aliquip exercitation tempor commodo.
-      author:
-        name: Jazmin Mccall
-        description: CEO at Company
-        avatar:
-          src: https://i.pravatar.cc/120?img=9
           loading: lazy
 cta:
   title: Take control today
