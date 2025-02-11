@@ -31,7 +31,7 @@ features:
     icon: i-heroicons-puzzle-piece
     class: col-span-6 row-span-2
   - title: Powerful insights
-    description: Get the right insights to make a decision. From montly distribution, alerts before renewal, and the information you need in a tightly beautiful way.
+    description: Get the right insights to make a decision. From monthly distribution, alerts before renewal, and the information you need in a tightly beautiful way.
     icon: i-heroicons-rectangle-group
     class: col-span-6 row-span-4
   - title: Secure

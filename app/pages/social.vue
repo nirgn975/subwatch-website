@@ -49,7 +49,7 @@
         <UIcon name="i-heroicons-currency-dollar" class="h-8 w-8" />
       </div>
       <p class="w-[36rem]">
-        Get the right insights to make a decision. From montly distribution, alerts before renewal, and the information you need in a tightly beautiful way.
+        Get the right insights to make a decision. From monthly distribution, alerts before renewal, and the information you need in a tightly beautiful way.
       </p>
     </div>
     <div class="relative h-full w-full">
