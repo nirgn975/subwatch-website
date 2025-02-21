@@ -6,33 +6,38 @@ const { data: page } = await useAsyncData("index", () => queryContent("/").findO
 const links = computed(() => [
   {
     label: "Features",
-    to: "#features",
+    to: "/#features",
     icon: "i-heroicons-sparkles",
     active: activeHeadings.value.includes("features") && !activeHeadings.value.includes("howitworks"),
   },
   {
     label: "How it work",
-    to: "#howitworks",
+    to: "/#howitworks",
     icon: "i-heroicons-bolt",
     active: activeHeadings.value.includes("howitworks") && !activeHeadings.value.includes("testimonials"),
   },
   {
     label: "Testimonials",
-    to: "#testimonials",
+    to: "/#testimonials",
     icon: "i-heroicons-chat-bubble-left-right",
     active: activeHeadings.value.includes("testimonials") && !activeHeadings.value.includes("pricing"),
   },
   {
     label: "Pricing",
-    to: "#pricing",
+    to: "/#pricing",
     icon: "i-heroicons-credit-card",
     active: activeHeadings.value.includes("pricing") && !activeHeadings.value.includes("faq"),
   },
   {
     label: "FAQ",
-    to: "#faq",
+    to: "/#faq",
     icon: "i-heroicons-question-mark-circle",
     active: activeHeadings.value.includes("faq"),
+  },
+  {
+    label: "Changelog",
+    to: "/changelog",
+    icon: "i-heroicons-newspaper",
   },
 ]);
 

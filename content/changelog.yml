@@ -1,0 +1,28 @@
+title: Changelog
+subtitle:
+items:
+  - title: Publish to webstore 🎉
+    date: November 15, 2024
+    html: false,
+    description: I'm thrilled to announce the debut of Subwatch on the Chrome Web Store! This first release brings the ability to track and monitor your subscriptions in the easiest way possible - to take them right from your Gmail. Download it and let me know what you think - more exciting updates are on the way!
+    version: 1.0.0
+    published: true
+  - title: Few bug fixes
+    date: December 1, 2024
+    html: true,
+    description: <ul><li>Button didn't show up on gmail on different languages then English 😇</li><li>Save license state in cookie.</li></ul>
+    version: 1.0.1
+    published: true
+  - title: Create subscribtions manually
+    date: February 18, 2025
+    picture: /changelog/v1.1.0.jpg
+    html: false,
+    description: As per popular request I added a way to add new subscribtions manually, by clicking the plus button on the top left corner. Also, not a lot of users know that you can click on the "Monthly spend" text to see it in a percentage pie chart so I added another button in the top left corner that will also move you to that screen.
+    version: 1.1.0
+    published: true
+  - title: Record usages and a few other perks
+    date: February 22, 2025
+    html: true,
+    description: <ul><li>You can now toggle between pie chart to bar chart 📊</li><li>Add a counter to total number of subscriptions in the chats page.</li><li>Calculate future (yearly) forecast in the chart page 🤓</li><li>A new way in the settings to record usages (entering the domain related to the subscription) so the extension will suggest to cancel subscriptions that are not in use when it's time to renew them 🥳</li></ul>
+    version: 1.2.0
+    published: true

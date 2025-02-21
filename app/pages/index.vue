@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppExtension from "@/components/demo/AppExtension.vue";
+import AppBentoGrid from "@/components/AppBentoGrid.vue";
 const { data: page } = await useAsyncData("index", () => queryContent("/").findOne());
 
 useSeoMeta({
@@ -11,31 +11,12 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <ULandingHero :title="page.hero.title" :description="page.hero.description" :links="page.hero.links" id="features" :ui="{ wrapper: 'py-24 relative' }">
-      <template #default>
-        <div class="hidden sm:block w-[36rem] mx-auto ring-1 ring-neutral-700 rounded-2xl px-4">
-          <AppExtension />
-        </div>
-        <div class="block sm:hidden">
-          <img src="/extension.png" />
-        </div>
-
-        <ULandingGrid>
-          <ULandingCard
-            v-for="(item, index) of page.features"
-            :key="index"
-            :class="item.class"
-            :icon="item.icon"
-            :title="item.title"
-            :description="item.description"
-          >
-          </ULandingCard>
-        </ULandingGrid>
-      </template>
-
-      <template #links>
-        <div class="flex flex-col gap-4">
+  <div id="features" class="py-24 sm:py-32 md:py-40 relative">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex flex-col text-center">
+      <h1 class="text-5xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-7xl">{{ page.hero.title }}</h1>
+      <p class="mt-2 text-lg tracking-tight text-gray-600 dark:text-gray-300">{{ page.hero.description }}</p>
+      <div class="mt-8 flex flex-wrap gap-x-6 gap-y-3 justify-center">
+        <div class="flex flex-col gap-2">
           <div class="flex flex-wrap gap-x-6 gap-y-3 justify-center">
             <UButton
               :label="page.hero.links[1].label"
@@ -79,7 +60,7 @@ useSeoMeta({
             />
           </div>
 
-          <div class="w-96 mx-auto flex gap-4 items-center justify-center mt-2">
+          <div class="w-96 mx-auto flex flex-col sm:flex-row gap-4 items-center justify-center mt-2">
             <UAvatarGroup size="sm">
               <UAvatar v-for="(item, index) of page.hero.users" :src="item" :key="index" />
             </UAvatarGroup>
@@ -96,25 +77,38 @@ useSeoMeta({
             </div>
           </div>
         </div>
-      </template>
-    </ULandingHero>
+      </div>
+    </div>
+  </div>
 
-    <ULandingSection id="howitworks" :title="page.howitworks.title" :ui="{ wrapper: 'py-24' }">
+  <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl pb-24 sm:pb-32 md:pb-40">
+    <AppBentoGrid :features="page.features" />
+  </div>
+
+  <div id="howitworks" class="py-24 sm:py-32 md:py-40 relative">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex flex-col gap-8">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl text-center">{{ page.howitworks.title }}</h2>
       <div class="p-4 ring-1 ring-neutral-700 rounded-2xl">
         <img src="/how-it-works.jpg" class="mb-4 rounded-t-xl" />
 
-        <ol class="flex gap-4">
-          <li v-for="(item, index) of page.howitworks.steps" :key="index" class="w-1/3 flex flex-col gap-4">
-            <span class="px-3 py-1.5 bg-neutral-800 rounded-xl w-fit">{{ item.step }}</span>
+        <ol class="flex flex-col sm:flex-row gap-4">
+          <li v-for="(item, index) of page.howitworks.steps" :key="index" class="sm:w-1/3 flex items-center sm:items-start sm:flex-col gap-4">
+            <div class="w-fit">
+              <span class="px-3 py-1.5 bg-neutral-800 rounded-xl whitespace-nowrap">{{ item.step }}</span>
+            </div>
             <p>{{ item.description }}</p>
           </li>
         </ol>
       </div>
-    </ULandingSection>
+    </div>
+  </div>
 
-    <ULandingSection id="testimonials" :title="page.testimonials.title" :ui="{ wrapper: 'py-24' }">
-      <template #description>
+  <div id="testimonials" class="py-24 sm:py-32 md:py-40 relative">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex flex-col gap-8 text-center">
+      <div class="space-y-6">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">{{ page.testimonials.title }}</h2>
         <a
+          class="flex justify-center"
           href="https://www.producthunt.com/posts/subwatch-3?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-subwatch&#0045;3"
           target="_blank"
           ><img
@@ -124,23 +118,19 @@ useSeoMeta({
             width="250"
             height="54"
         /></a>
-      </template>
+      </div>
 
-      <UPageColumns id="testimonials" class="xl:columns-4 scroll-mt-[calc(var(--header-height)+140px+128px+96px)]">
+      <UPageColumns class="xl:columns-4 scroll-mt-[calc(var(--header-height)+140px+128px+96px)]">
         <div v-for="(testimonial, index) in page.testimonials.items" :key="index" class="break-inside-avoid">
           <ULandingTestimonial v-bind="testimonial" />
         </div>
       </UPageColumns>
-    </ULandingSection>
+    </div>
+  </div>
 
-    <ULandingSection
-      :title="page.pricing.title"
-      id="pricing"
-      :ui="{
-        wrapper: 'py-24',
-        container: 'gap-16 sm:gap-y-24 flex flex-col max-w-5xl',
-      }"
-    >
+  <div id="pricing" class="py-24 sm:py-32 md:py-40 relative">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl flex flex-col gap-8 text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">{{ page.pricing.title }}</h2>
       <UPricingCard
         :title="page.pricing.plan"
         :price="page.pricing.price"
@@ -151,9 +141,11 @@ useSeoMeta({
         align="bottom"
         :features="page.pricing.features"
       />
-    </ULandingSection>
+    </div>
+  </div>
 
-    <ULandingSection class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10" :ui="{ wrapper: 'py-24' }">
+  <div class="py-16 sm:py-24 md:py-32 relative dark:bg-gray-900">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex flex-col gap-8">
       <ULandingCTA v-bind="page.cta" :card="false" align="left">
         <div class="relative h-full w-full flex justify-center items-center">
           <img src="/cta.jpg" class="rounded-xl" />
@@ -206,9 +198,12 @@ useSeoMeta({
           </div>
         </template>
       </ULandingCTA>
-    </ULandingSection>
+    </div>
+  </div>
 
-    <ULandingSection id="faq" :title="page.faq.title" :description="page.faq.description" class="scroll-mt-[var(--header-height)]" :ui="{ wrapper: 'py-24' }">
+  <div id="faq" class="py-24 sm:py-32 md:py-40 relative">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl flex flex-col gap-8">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">{{ page.faq.title }}</h2>
       <ULandingFAQ
         multiple
         :items="page.faq.items"
@@ -222,6 +217,6 @@ useSeoMeta({
         }"
         class="max-w-4xl mx-auto"
       />
-    </ULandingSection>
+    </div>
   </div>
 </template>
