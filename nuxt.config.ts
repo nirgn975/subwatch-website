@@ -24,5 +24,11 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+  site: {
+    url: "subwatch.co",
+  },
+  image: {
+    format: ["webp"],
+  },
   compatibilityDate: "2024-07-11",
 });

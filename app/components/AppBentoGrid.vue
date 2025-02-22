@@ -17,20 +17,24 @@ defineProps({
         ]"
       >
         <div v-if="index == 0" class="h-96 overflow-hidden relative flex justify-center items-center">
-          <img
+          <NuxtImg
             class="w-[90%] sm:w-[75%] md:w-[58%] lg:w-[88%] absolute transition-transform duration-700 transform"
             :src="item.image"
             alt="month subscription data"
           />
-          <img
+          <NuxtImg
             class="w-[90%] sm:w-[75%] md:w-[58%] lg:w-[88%] absolute opacity-0 transition-opacity duration-700 transform hover:opacity-100"
             :src="item.image_hover"
             alt="tooltip subscription data"
           />
         </div>
         <div v-if="index == 1" class="h-96 overflow-hidden relative flex justify-center items-center">
-          <img class="w-[90%] sm:w-[55%] md:w-[75%] lg:w-[83%] absolute transition-transform duration-700 transform" :src="item.image" alt="pie chart view" />
-          <img
+          <NuxtImg
+            class="w-[90%] sm:w-[55%] md:w-[75%] lg:w-[83%] absolute transition-transform duration-700 transform"
+            :src="item.image"
+            alt="pie chart view"
+          />
+          <NuxtImg
             class="w-[90%] sm:w-[55%] md:w-[75%] lg:w-[83%] lg:-top-[1.5rem] xl:-top-[4.8rem] absolute opacity-0 transition-opacity duration-700 transform hover:opacity-100"
             :src="item.image_hover"
             alt="bar chart view"
@@ -66,12 +70,12 @@ defineProps({
           </div>
         </div>
         <div v-if="index == 3" class="h-80 relative overflow-hidden flex justify-center items-center">
-          <img
+          <NuxtImg
             class="w-[80%] sm:w-[38%] md:w-[28%] lg:w-[70%] xl:w-[65%] absolute transition-transform duration-700 transform"
             :src="item.image"
             alt="add new subscription panel"
           />
-          <img
+          <NuxtImg
             class="w-[80%] sm:w-[38%] md:w-[28%] lg:w-[70%] xl:w-[65%] absolute opacity-0 transition-opacity duration-700 transform hover:opacity-100"
             :src="item.image_hover"
             alt="add new subscription filled"
@@ -79,7 +83,7 @@ defineProps({
         </div>
         <div v-if="index == 4" class="h-80 flex justify-center items-center group relative">
           <div class="w-[95%] group-hover:motion-preset-confetti">
-            <img class="rounded-[1.2rem]" :src="item.image" alt="notification" />
+            <NuxtImg class="rounded-[1.2rem]" :src="item.image" alt="notification" />
           </div>
         </div>
         <div class="p-6 sm:p-8">

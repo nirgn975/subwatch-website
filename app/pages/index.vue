@@ -62,7 +62,7 @@ useSeoMeta({
 
           <div class="w-96 mx-auto flex flex-col sm:flex-row gap-4 items-center justify-center mt-2">
             <UAvatarGroup size="sm">
-              <UAvatar v-for="(item, index) of page.hero.users" :src="item" :key="index" />
+              <UAvatar v-for="(item, index) of page.hero.users" :src="item" :key="index" :alt="`user review ${index}`" />
             </UAvatarGroup>
 
             <div class="flex flex-col items-center justify-center">
@@ -89,7 +89,7 @@ useSeoMeta({
     <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex flex-col gap-8">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl text-center">{{ page.howitworks.title }}</h2>
       <div class="p-4 ring-1 ring-neutral-700 rounded-2xl">
-        <img src="/how-it-works.jpg" class="mb-4 rounded-t-xl" />
+        <NuxtImg src="/how-it-works.jpg" class="mb-4 rounded-t-xl w-full" alt="How it works example" />
 
         <ol class="flex flex-col sm:flex-row gap-4">
           <li v-for="(item, index) of page.howitworks.steps" :key="index" class="sm:w-1/3 flex items-center sm:items-start sm:flex-col gap-4">
@@ -111,7 +111,7 @@ useSeoMeta({
           class="flex justify-center"
           href="https://www.producthunt.com/posts/subwatch-3?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-subwatch&#0045;3"
           target="_blank"
-          ><img
+          ><NuxtImg
             src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=660222&theme=light&t=1739308020693"
             alt="Subwatch - Turn&#0032;subscription&#0032;chaos&#0032;into&#0032;financial&#0032;harmony&#0046; | Product Hunt"
             style="width: 250px; height: 54px"
@@ -148,7 +148,7 @@ useSeoMeta({
     <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex flex-col gap-8">
       <ULandingCTA v-bind="page.cta" :card="false" align="left">
         <div class="relative h-full w-full flex justify-center items-center">
-          <img src="/cta.jpg" class="rounded-xl" />
+          <NuxtImg src="/cta.jpg" class="rounded-xl w-full" alt="CTA banner" />
         </div>
 
         <template #links>
