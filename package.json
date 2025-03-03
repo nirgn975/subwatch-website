@@ -20,7 +20,7 @@
     "@nuxtjs/seo": "^2.0.2",
     "motion": "^10.18.0",
     "nuxt": "^3.13.2",
-    "posthog-js": "^1.181.0"
+    "posthog-js": "^1.225.0"
   },
   "devDependencies": {
     "tailwindcss-motion": "^1.1.0",
